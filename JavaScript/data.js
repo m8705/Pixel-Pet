@@ -16,3 +16,14 @@ var tamago = {
 //     cake : 25,
 //     rice : 35
 // }
+// 清洁
+// var object = {
+//     soap : 30,
+//     bathe : 50
+//}
+// 娱乐 
+// var doing = {
+//     ball : 20,
+//     TV : 25,
+//     playing : 35
+//}
