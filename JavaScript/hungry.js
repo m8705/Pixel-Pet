@@ -28,7 +28,7 @@ function addFood(food) {
             tamago.hungry += 15;
             tamago.isEating = 1;
         }else{
-            tamago.hungryy = 100;
+            tamago.hungry = 100;
         }
     }
 
