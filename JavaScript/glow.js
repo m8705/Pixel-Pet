@@ -1,4 +1,3 @@
-// 还差一个计时器
 function glow(food,object,doing) {
     // var firtTime;
     // var endTime;

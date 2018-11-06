@@ -1,11 +1,10 @@
-// 主函数
 function happy(doing){
-    // var ball = 20;
-    // var TV = 25;
-    // var playing = 30;
+    var ball = 20;
+    var TV = 25;
+    var playing = 30;
 
     //每分钟下降心情值
-    setInterval(reduceHappy(),1000*120);
+    setInterval(reduceHappy(),1000*60);
 
     //是否玩耍
     if(doing === ball || doing === TV || doing === playing){
