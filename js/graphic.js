@@ -1,4 +1,92 @@
-﻿function l(x,y,option,rgb){//x行y列
+﻿
+
+
+function draw(){
+
+	drawStateBanner();
+	drawPet();
+
+}
+
+
+function drawStateBanner(){
+
+	var co = getContext();
+	
+	co.drawImage(pic("banner.png"), 0, 0);
+
+}
+
+function drawPet(){
+
+	l(7,2)
+	l(8,2)
+	l(9,2)
+	l(10,2)
+	l(11,2)
+	
+	l(6,3)
+	l(12,3)
+	
+	l(3,4)
+	l(4,4)
+	l(5,4)
+	l(7,4)
+	l(11,4)
+	l(13,4)
+	
+	l(2,5)
+	l(14,5)
+	
+	l(3,6)
+	l(4,6)
+	l(5,6)
+	l(14,6)
+	
+	l(2,7)
+	l(14,7)
+	
+	l(3,8)
+	l(4,8)
+	l(5,8)
+	l(14,8)
+	
+	l(5,9)
+	l(10,9)
+	l(12,9)
+	l(15,9)
+	
+	l(5,10)
+	l(10,10)
+	l(12,10)
+	l(15,10)
+	
+	l(5,11)
+	l(11,11)
+	l(15,11)
+	
+	l(6,12)
+	l(14,12)
+	
+	l(7,13)
+	l(9,13)
+	l(10,13)
+	l(11,13)
+	l(13,13)
+	
+	l(7,14)
+	l(9,14)
+	l(11,14)
+	l(13,14)
+	
+	l(8,15)
+	l(12,15)
+
+}
+
+
+
+function l(x,y,option,rgb){//x行y列
 	var co = getContext();
 	co.fillStyle = rgb?rgb:"rgb(90,102,66)";
 	blockX = x * 10+1;
@@ -34,10 +122,8 @@ function q(x,rgb){//画横线
 	}
 }
 
+
 var t = 0;
-
-
-
 function strokeColorScreen(){
 	
 	setInterval(function(){
@@ -53,7 +139,7 @@ function strokeColorScreen(){
 	//clearInterval(timer);
 	
 }
-strokeColorScreen()
+//strokeColorScreen()
 
 
 var z = 0;
