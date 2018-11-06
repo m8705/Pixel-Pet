@@ -24,7 +24,7 @@ function reduceHappy(){
 function play(doing){
     if(doing === ball){
         if(tamago.happy <= 80){
-            tamago.happy += 20;
+            tamago.hungry += 20;
             tamago.isHappying = 1;
         }else{
             tamago.happy = 100;
@@ -33,7 +33,7 @@ function play(doing){
 
     if(doing === TV){
         if(tamago.happy <= 75){
-            tamago.happy += 25;
+            tamago.hungry += 25;
             tamago.isHappying = 1;
         }else{
             tamago.happy = 100;
