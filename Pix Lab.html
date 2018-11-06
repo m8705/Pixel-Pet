@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pix Lab</title>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+		<meta charset="UTF-8">
+		<style>
+			canvas{
+				border:1px solid black;
+			}
+		</style>
+	</head>
+	<body onload="init()">
+		<center>
+			<canvas width="270" height="270" id="canvas">你的浏览器不支持canvas。</canvas>
+			<p id="r">调试窗口</p>
+			<textarea id="Code" wrap="logical"></textarea></br>
+			<input type=button onclick="TestCode()" value="调试">
+			<input type=button onclick="CleanAll()" value="清空文本框">
+		</center>
+	</body>
+	<script src="js/common.js"></script>
+	<script src="js/color.js"></script>
+	<script src="js/graphic.js"></script>
+	<script>
+	/*var canvas = document.getElementById("canvas");
+	
+	var x = 270;
+	var y = 270;
+	
+	canvas.setAttribute('width', x * 2);
+	canvas.setAttribute('height', y * 2);
+	canvas.style.width = x + 'px';
+	canvas.style.height = y + 'px';*/
+	</script>
+</html>
