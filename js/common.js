@@ -1,28 +1,44 @@
-﻿function TestCode(){
-	var Code = document.getElementById("Code").value;
-	try  {
-			eval(Code);
+﻿
+//isPicLoaded=0(loader.js)
+window.onload = function(){
+	
+	var past = Date.now();
+	while(!isPicLoaded){//等待图片加载完毕
+		if(isPicLoaded){
+			break;
+		}
+		else if( (Date.now()-past)/1000 > 4 ){//防止等待时间过长
+			break;
+		}
 	}
-
-	catch(exception) {
-		alert(exception);
-	}
-}
-		
-function CleanAll(){
-	var Code = document.getElementById("Code");
-	Code.value="";
+	
+	init();
+	
 }
 
-function $(n){
-	return document.getElementById(n);
-}
 
-function getContext(){
-	return $("canvas").getContext("2d");
-}
 
 function init(){//初始化屏幕
+	
+	setEvent();
+	draw();
+	
+	setInterval(function(){//启动动画
+		draw();
+		
+	},200);
+	
+	setInterval(function(){
+		
+		reduceHungry()
+		reduceClean()
+		reduceHappy()
+	}, 1000);
+	
+}
+
+function drawMatrix(){
+	
 	var c = $("canvas");
 	var co = getContext();
 	
@@ -45,22 +61,12 @@ function init(){//初始化屏幕
 	co.closePath();
 	co.stroke();
 	
-	draw();
-	
-		/*
-			img	规定要使用的图像、画布或视频。
-			sx	可选。开始剪切的 x 坐标位置。
-			sy	可选。开始剪切的 y 坐标位置。
-			swidth	可选。被剪切图像的宽度。
-			sheight	可选。被剪切图像的高度。
-			x	在画布上放置图像的 x 坐标位置。
-			y	在画布上放置图像的 y 坐标位置。
-			width	可选。要使用的图像的宽度。（伸展或缩小图像）
-			height	可选。要使用的图像的高度。（伸展或缩小图像）
-		*/
-	
-		//co.drawImage(pic,70,70,70,70,70,70,140,140);
-		//co.drawImage(pic,0,0,70,70,150,150,280,280);
-	
-	
+}
+
+function $(n){
+	return document.getElementById(n);
+}
+
+function getContext(){
+	return $("canvas").getContext("2d");
 }

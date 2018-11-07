@@ -34,11 +34,6 @@
 				text-indent:-4px;
 				display:inline-block;
 				background: url("img/button.png") 0px 0px no-repeat;
-   			    -webkit-user-select:none;
- 				-moz-user-select:none;
-				-ms-user-select:none;
-				-khtml-user-select:none;
-				user-select:none;
 			}
 			
 			.button:hover{
@@ -58,25 +53,25 @@
 			<div class="shell"></div>
 			<canvas width="270" height="270" id="canvas">你的浏览器不支持canvas。</canvas>
 			</br>
-			<div class="button">选择</div>
-			<div class="button">确认</div>
-			<div class="button">取消</div>
+			<div id="select" class="button">选择</div>
+			<div id="confirm" class="button">确认</div>
+			<div id="cancel" class="button">取消</div>
 			</br>
 		</center>
-		
-		
-		<!--<textarea id="Code" wrap="logical"></textarea></br>
-		<input type=button onclick="TestCode()" value="调试">
-		<input type=button onclick="CleanAll()" value="清空文本框">
-		-->
 	</body>
 	
 	<script src="js/loader.js"></script>
 	<script src="js/common.js"></script>
 	<script src="js/color.js"></script>
 	<script src="js/graphic.js"></script>
+	<script src="js/event.js"></script>
+	
 	
 	<script src="js/data.js"></script>
+	<script src="js/clean.js"></script>
+	<script src="js/happy.js"></script>
+	<script src="js/hungry.js"></script>
+	<script src="js/glow.js"></script>
 	
 	<script>
 	/*var canvas = document.getElementById("canvas");
