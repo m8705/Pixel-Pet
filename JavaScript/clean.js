@@ -1,9 +1,10 @@
+//每分钟下降清洁度
+setInterval(reduceClean(), 1000 * 60);
+
 function clean(object){
     var bathe = 50;
-    var soap =30;
-
-    //每分钟下降清洁度
-    setInterval(reduceClean(),1000*60);
+    var soap = 30;
+    
 
     //是否洗澡
     if(object === bathe || object === soap){
