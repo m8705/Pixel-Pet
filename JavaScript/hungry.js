@@ -1,10 +1,10 @@
 //每分钟减少饥饿值1
-setInterval(reduceHungry(),1000*60);
+// setInterval(reduceHungry(),1000*60);
     
 function hungry(food) {
-    const apple = 15;
-    const cake = 25;
-    const rice = 35;
+    // const apple = 15;
+    // const cake = 25;
+    // const rice = 35;
     // var hungry = 100;
 
 
