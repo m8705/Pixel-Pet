@@ -2,9 +2,9 @@
 //setInterval(reduceHappy(), 1000 * 60);
 
 function happy(doing){
-    var ball = 20;
-    var TV = 25;
-    var playing = 30;
+    // var ball = 20;
+    // var TV = 25;
+    // var playing = 30;
     
 
     //是否玩耍
