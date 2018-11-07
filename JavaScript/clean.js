@@ -15,7 +15,8 @@ function clean(object){
 
 function reduceClean(){
     if(tamago.clean > 0){
-        tamago.clean --;
+        let a = 0.5;
+        tamago.clean = tamago.clean - a;
     }else{
         tamago.clean = 0;
     }
