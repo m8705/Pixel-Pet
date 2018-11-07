@@ -17,13 +17,13 @@ window.onload = function(){
 }
 
 
-
+var mainDrawingTimer = null;
 function init(){//初始化屏幕
 	
 	setEvent();
 	draw();
 	
-	setInterval(function(){//启动动画
+	mainDrawingTimer = setInterval(function(){//启动动画
 		draw();
 		
 	},200);

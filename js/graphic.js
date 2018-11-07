@@ -17,7 +17,7 @@ function drawStateBanner(){
 	co.drawImage(pic("banner.png"), 10, 10);
 	
 	co.font = "20px Arial";
-    co.fillStyle = "black";
+    co.fillStyle = "rgb(90,102,66)";
     co.textBaseline = "middle";
 	
 	//bug:间距未确定
