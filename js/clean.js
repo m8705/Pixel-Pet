@@ -1,5 +1,5 @@
 //每分钟下降清洁度
-setInterval(reduceClean(), 1000 * 60);
+// setInterval(reduceClean(), 1000 * 60);
 
 function clean(object){
     // var bathe = 50;

@@ -33,7 +33,7 @@ function init(){//初始化屏幕
 		reduceHungry()
 		reduceClean()
 		reduceHappy()
-	}, 1000);
+	}, 1000*60);
 	
 }
 
