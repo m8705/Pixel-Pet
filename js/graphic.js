@@ -14,6 +14,15 @@ function drawStateBanner(){
 	var co = getContext();
 	
 	co.drawImage(pic("banner.png"), 0, 0);
+	
+	co.font = "20px Arial";
+    co.fillStyle = "black";
+    co.textBaseline = "middle";
+	
+	//bug:间距未确定
+    co.fillText(tamago.hungry,50,25);
+	co.fillText(tamago.clean,130,25);
+	co.fillText(tamago.happy,220,25);
 
 }
 

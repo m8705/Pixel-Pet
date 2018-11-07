@@ -5,24 +5,74 @@
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
 		<meta charset="UTF-8">
 		<style>
+			body{
+				user-select:none;
+			}
+			
 			canvas{
+				position:relative;
+				top:-480px;
+				
 				border:1px solid black;
 			}
+		</style>
+		<style>
+			
+			.shell{
+				width:592px;
+				height:730px;
+				background: url("img/shell.png") 0px 0px no-repeat;
+			}
+			
+			.button{
+				position:relative;
+				top:-380px;
+			
+				width:64px;
+				height:64px;
+				line-height:55px;
+				text-indent:-4px;
+				display:inline-block;
+				background: url("img/button.png") 0px 0px no-repeat;
+			}
+			
+			.button:hover{
+				background: url("img/button-selected.png") 0px 0px no-repeat;
+			}
+			
+			.button:active{
+				background: url("img/button.png") -64px 0px no-repeat;
+			}
+			
+			
+		
 		</style>
 	</head>
 	<body onload="init()">
 		<center>
+			<div class="shell"></div>
 			<canvas width="270" height="270" id="canvas">你的浏览器不支持canvas。</canvas>
-			<p id="r">调试窗口</p>
-			<textarea id="Code" wrap="logical"></textarea></br>
-			<input type=button onclick="TestCode()" value="调试">
-			<input type=button onclick="CleanAll()" value="清空文本框">
+			</br>
+			<div class="button">选择</div>
+			<div class="button">确认</div>
+			<div class="button">取消</div>
+			</br>
 		</center>
+		
+		
+		<!--<textarea id="Code" wrap="logical"></textarea></br>
+		<input type=button onclick="TestCode()" value="调试">
+		<input type=button onclick="CleanAll()" value="清空文本框">
+		-->
 	</body>
+	
 	<script src="js/loader.js"></script>
 	<script src="js/common.js"></script>
 	<script src="js/color.js"></script>
 	<script src="js/graphic.js"></script>
+	
+	<script src="js/data.js"></script>
+	
 	<script>
 	/*var canvas = document.getElementById("canvas");
 	
