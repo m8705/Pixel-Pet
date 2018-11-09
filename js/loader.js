@@ -16,7 +16,11 @@ function preLoad(){
 preLoad(
 
 	"banner.png",
-	"pic.png"
+	"pic.png",
+	"play.png",
+	"food.png",
+	"clean.png",
+	"rabbit.png"
 
 )
 

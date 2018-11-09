@@ -1,14 +1,104 @@
 ﻿
+var Game = {};
 
+Game.blur = "None";//Food/Clean/Play
+Game.scene = "Main";//Food/Clean/Play
+Game.pickObject = 0;//
 
 function draw(){
 	
 	drawMatrix();
 	drawStateBanner();
-	drawPet();
+	
+	if(Game.scene === "Main"){
+		drawBlur();
+		drawPet();
+	}
+	else{
+		
+		switch(Game.scene){
+			
+			case "Food":
+				drawSeletingFood();
+				break;
+			case "Clean":
+				drawSeletingClean();
+				break;
+			case "Play":
+				drawSeletingPlay();
+				break;
+			
+		}
+		
+	}
+	
+	
 
 }
 
+function drawBlur(){
+	
+	var co = getContext();
+		co.strokeStyle = "rgb(90,102,66)";
+		co.lineWidth = 2;
+		co.lineCap = "square";
+		co.beginPath();
+	
+	if(Game.blur === "Food"){
+		
+		co.strokeRect(10,10,30,30);
+		
+		co.moveTo(10,10);
+		co.lineTo(10,20);
+		co.moveTo(10,10);
+		co.lineTo(20,10);
+		
+		
+		
+		co.moveTo(40,40);
+		co.lineTo(40,30);
+		co.moveTo(40,40);
+		co.lineTo(30,40);
+		co.closePath();
+		co.stroke();
+		
+	}
+	else if(Game.blur === "Clean"){
+		
+		co.strokeRect(100,10,30,30);
+		
+		co.moveTo(100,10);
+		co.lineTo(100,20);
+		co.moveTo(100,10);
+		co.lineTo(110,10);
+		
+		co.moveTo(130,40);
+		co.lineTo(130,30);
+		co.moveTo(130,40);
+		co.lineTo(120,40);
+		co.closePath();
+		co.stroke();
+		
+	}
+	else if(Game.blur === "Play"){
+		
+		co.strokeRect(190,10,30,30);
+		
+		co.moveTo(190,10);
+		co.lineTo(190,20);
+		co.moveTo(190,10);
+		co.lineTo(200,10);
+		
+		co.moveTo(220,40);
+		co.lineTo(220,30);
+		co.moveTo(220,40);
+		co.lineTo(210,40);
+		co.closePath();
+		co.stroke();
+		
+	}
+	
+}
 
 function drawStateBanner(){
 
@@ -29,6 +119,11 @@ function drawStateBanner(){
 
 function drawPet(){
 
+	var co = getContext();
+	var start = picState;
+	
+	co.drawImage(pic("rabbit.png"),(70*start),0,70,70,100,100,70,70);
+	/*
 	l(7,2)
 	l(8,2)
 	l(9,2)
@@ -91,10 +186,37 @@ function drawPet(){
 	
 	l(8,15)
 	l(12,15)
-
+	*/
 }
 
+function drawSeletingFood(){
+	
+	var co = getContext();
+	var start = Game.pickObject;
+	
+	//co.drawImage(pic("food.png"),10,40);
+	
+	co.drawImage(pic("food.png"),(30*start),0,30,30,90,90,90,90);
+	
+}
 
+function drawSeletingClean(){
+	
+	var co = getContext();
+	var start = Game.pickObject;
+	
+	co.drawImage(pic("clean.png"),(30*start),0,30,30,90,90,90,90);
+	
+}
+
+function drawSeletingPlay(){
+	
+	var co = getContext();
+	var start = Game.pickObject;
+	
+	co.drawImage(pic("play.png"),(30*start),0,30,30,90,90,90,90);
+	
+}
 
 function l(x,y,option,rgb){//x行y列
 	var co = getContext();
@@ -182,3 +304,20 @@ function strokeScreen(speed,rgb){//清屏
 //strokeScreen(10,"random");
 //strokeScreen(20,"rgb(140,188,176)");
 //strokeScreen(20);
+
+var y = 0;
+function strokeColorScreen(){
+	
+	setInterval(function(){
+	
+		if(y<=54){
+			q(y)
+		}
+		
+		y++
+	
+	},10);
+	
+	//clearInterval(timer);
+	
+}

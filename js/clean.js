@@ -1,11 +1,9 @@
-//每分钟下降清洁度
-// setInterval(reduceClean(), 1000 * 60);
+
+var bathe = 50;
+var soap = 30;
 
 function clean(object){
-    // var bathe = 50;
-    // var soap = 30;
     
-
     //是否洗澡
     if(object === bathe || object === soap){
         washing(object); 
@@ -13,7 +11,7 @@ function clean(object){
     }
 }
 
-function reduceClean(){
+function reduceClean(){//每分钟下降清洁度1
     if(tamago.clean > 0){
         let a = 0.5;
         tamago.clean = tamago.clean - a;
@@ -21,6 +19,7 @@ function reduceClean(){
         tamago.clean = 0;
     }
 }
+// setInterval(reduceClean(), 1000 * 60);
 
 function washing(object){
     if(object === bathe){

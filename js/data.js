@@ -11,19 +11,19 @@ var tamago = {
 }
 
 // 食物
-// var food = {
-//     apple : 15,
-//     cake : 25,
-//     rice : 35
-// }
+ var food = {
+     apple : 15,
+     cake : 25,
+     rice : 35
+ }
 // 清洁
-// var object = {
-//     soap : 30,
-//     bathe : 50
-//}
+ var object = {
+     soap : 30,
+     bathe : 50
+}
 // 娱乐 
-// var doing = {
-//     ball : 20,
-//     TV : 25,
-//     playing : 35
-//}
+var doing = {
+     ball : 20,
+     TV : 25,
+     playing : 35
+}

@@ -1,4 +1,6 @@
 ﻿
+var picState = 0;
+
 //isPicLoaded=0(loader.js)
 window.onload = function(){
 	
@@ -26,7 +28,7 @@ function init(){//初始化屏幕
 	mainDrawingTimer = setInterval(function(){//启动动画
 		draw();
 		
-	},200);
+	},20);
 	
 	setInterval(function(){
 		
@@ -34,6 +36,15 @@ function init(){//初始化屏幕
 		reduceClean()
 		reduceHappy()
 	}, 1000*60);
+	
+	setInterval(function(){
+		if(picState === 1){
+			picState = 0;
+		}
+		else{
+			picState++;
+		}
+	}, 1000);
 	
 }
 

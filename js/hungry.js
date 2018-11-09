@@ -1,11 +1,11 @@
-//每分钟减少饥饿值1
-// setInterval(reduceHungry(),1000*60);
-    
+
+var apple = 15;
+var cake = 25;
+var rice = 35;
+
 function hungry(food) {
-    // const apple = 15;
-    // const cake = 25;
-    // const rice = 35;
-    // var hungry = 100;
+    
+    var hungry = 100;
 
 
     //是否喂食
@@ -15,13 +15,14 @@ function hungry(food) {
     }
 }
 
-function reduceHungry() {
+function reduceHungry() {//每分钟减少饥饿值
     if(tamago.hungry > 15){
         tamago.hungry --;
     }else{
         tamago.hungry = 15;
     }
 }
+// setInterval(reduceHungry(),1000*60);
 
 function addFood(food) {
     if(food === apple){

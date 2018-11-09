@@ -1,12 +1,10 @@
-//每分钟下降心情值
-// setInterval(reduceHappy(), 1000 * 60);
+
+var ball = 20;
+var TV = 25;
+var playing = 30;
 
 function happy(doing){
-    // var ball = 20;
-    // var TV = 25;
-    // var playing = 30;
     
-
     //是否玩耍
     if(doing === ball || doing === TV || doing === playing){
         play(doing); 
@@ -14,13 +12,16 @@ function happy(doing){
     }
 }
 
-function reduceHappy(){
+
+
+function reduceHappy(){//每分钟下降心情值
     if(tamago.happy > 0){
         tamago.happy --;
     }else{
         tamago.happy = 0;
     }
 }
+// setInterval(reduceHappy(), 1000 * 60);
 
 function play(doing){
     if(doing === ball){
